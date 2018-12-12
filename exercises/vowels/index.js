@@ -7,6 +7,17 @@
 //   vowels('Why do you ask?') --> 4
 //   vowels('Why?') --> 0
 
-function vowels(str) {}
+function vowels(str) {
+  let count = 0 
+  str = str.replace(/[^\w]/g, '')
+  for (let char of str) {
+    if (char.toLowerCase() === 'a' || char.toLowerCase() ==='e' || char.toLowerCase() === 'i' || char.toLowerCase() === 'o' || char.toLowerCase() === 'u' ) {
+      count += 1
+    }
+  }
 
+  return count
+}
+
+console.log(vowels('Hi There!'))
 module.exports = vowels;
